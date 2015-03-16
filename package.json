@@ -1,0 +1,20 @@
+{
+  "name": "finalbuilder",
+  "main": "./lib/finalbuilder",
+  "version": "0.0.0",
+  "description": "Build FinalBuilder projects from Atom",
+  "activationCommands": {
+    "atom-workspace": [
+      "finalbuilder:open-in-ui",
+      "finalbuilder:build-with-ui",
+      "finalbuilder:build-with-cmd"
+    ]
+  },
+  "repository": "https://github.com/alefragnani/finalbuilder",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=0.174.0 <2.0.0"
+  },
+  "dependencies": {
+  }
+}

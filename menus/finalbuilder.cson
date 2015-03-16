@@ -1,0 +1,69 @@
+'context-menu':
+  '.tree-view .file .name[data-name$=\\.fbp7]': [
+    {
+      'type': 'separator'
+    },
+    {
+      'label': 'Open in FinalBuilder'
+      'command': 'finalbuilder:open-in-ui'
+    },
+    {
+      'label': 'Build in FinalBuilder'
+      'command': 'finalbuilder:build-with-ui'
+    },
+    {
+      'label': 'Build with FBCmd'
+      'command': 'finalbuilder:build-with-cmd'
+    },
+    {
+      'type': 'separator'
+    }
+  ],
+  '.tree-view .file .name[data-name$=\\.fbz7]': [
+    {
+      'label': 'Open in FinalBuilder'
+      'command': 'finalbuilder:open-in-ui'
+    },
+    {
+      'label': 'Build in FinalBuilder'
+      'command': 'finalbuilder:build-with-ui'
+    },
+    {
+      'label': 'Build with FBCmd'
+      'command': 'finalbuilder:build-with-cmd'
+    },
+    {
+      'type': 'separator'
+    }
+  ]
+
+
+'menu': [
+  {
+    'label': 'Packages'
+    'submenu': [
+      'label': 'FinalBuilder'
+      'submenu': [
+        {
+          'label': 'Toggle'
+          'command': 'finalbuilder:toggle'
+        }
+        {
+          'type': 'separator'
+        }
+        {
+          'label': 'Open in FinalBuilder'
+          'command': 'finalbuilder:open-in-ui'
+        }
+        {
+          'label': 'Build in FinalBuilder'
+          'command': 'finalbuilder:build-with-cmd'
+        }
+        {
+          'label': 'Build with FBCmd'
+          'command': 'finalbuilder:build-with-cmd'
+        }
+      ]
+    ]
+  }
+]
