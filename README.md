@@ -14,11 +14,11 @@ You can use **Command Palette** or **Treeview Context Menu**.
 
 #### Tree-view Context Menu
 
-![context menu](context-menu.png)
+![context menu](https://raw.githubusercontent.com/alefragnani/finalbuilder/master/context-menu.png)
 
 #### Command Palette
 
-![command pallete](command-palette.png)
+![command pallete](https://raw.githubusercontent.com/alefragnani/finalbuilder/master/command-palette.png)
 
 ## Compatibility
 
