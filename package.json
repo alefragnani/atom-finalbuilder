@@ -5,9 +5,9 @@
   "description": "Build FinalBuilder projects from Atom",
   "activationCommands": {
     "atom-workspace": [
-      "finalbuilder:open-in-ui",
-      "finalbuilder:build-with-ui",
-      "finalbuilder:build-with-cmd"
+      "finalbuilder:open-in-finalbuilder",
+      "finalbuilder:build-in-finalbuilder",
+      "finalbuilder:build-with-fbcmd"
     ]
   },
   "repository": "https://github.com/alefragnani/finalbuilder",

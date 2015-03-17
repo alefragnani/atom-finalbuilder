@@ -26,9 +26,9 @@ module.exports = Finalbuilder =
     # Events subscribed to in atom's system can be easily cleaned up with a CompositeDisposable
     @subscriptions = new CompositeDisposable
 
-    @subscriptions.add atom.commands.add '.pane atom-text-editor, .tree-view .selected', 'finalbuilder:open-in-ui', @doOpenInUI
-    @subscriptions.add atom.commands.add '.pane atom-text-editor, .tree-view .selected', 'finalbuilder:build-with-ui', @doBuildWithUI
-    @subscriptions.add atom.commands.add '.pane atom-text-editor, .tree-view .selected', 'finalbuilder:build-with-cmd', @doBuildWithCmd
+    @subscriptions.add atom.commands.add '.pane atom-text-editor, .tree-view .selected', 'finalbuilder:open-in-finalbuilder', @doOpenInFinalBuilder
+    @subscriptions.add atom.commands.add '.pane atom-text-editor, .tree-view .selected', 'finalbuilder:build-in-finalbuilder', @doBuildInFinalBuilder
+    @subscriptions.add atom.commands.add '.pane atom-text-editor, .tree-view .selected', 'finalbuilder:build-with-fbcmd', @doBuildWithFBCmd
 
   deactivate: ->
     @modalPanel.destroy()
@@ -38,7 +38,7 @@ module.exports = Finalbuilder =
   serialize: ->
     finalbuilderViewState: @finalbuilderView.serialize()
 
-  doOpenInUI: (e) =>
+  doOpenInFinalBuilder: (e) =>
     fbu = new FinalBuilderUtils()
     filePath = fbu.getFilePathFromEvent(e)
 
@@ -51,7 +51,7 @@ module.exports = Finalbuilder =
     exec "start \"open ui\" " + cmdline, cwd: folder
 
 
-  doBuildWithUI: (e) =>
+  doBuildInFinalBuilder: (e) =>
     fbu = new FinalBuilderUtils()
     filePath = fbu.getFilePathFromEvent(e)
 
@@ -64,7 +64,7 @@ module.exports = Finalbuilder =
     exec "start \"build ui\" " + cmdline, cwd: folder
 
 
-  doBuildWithCmd: (e) =>
+  doBuildWithFBCmd: (e) =>
     fbu = new FinalBuilderUtils()
     filePath = fbu.getFilePathFromEvent(e)
 

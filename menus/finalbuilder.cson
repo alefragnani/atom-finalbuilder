@@ -5,15 +5,15 @@
     },
     {
       'label': 'Open in FinalBuilder'
-      'command': 'finalbuilder:open-in-ui'
+      'command': 'finalbuilder:open-in-finalbuilder'
     },
     {
       'label': 'Build in FinalBuilder'
-      'command': 'finalbuilder:build-with-ui'
+      'command': 'finalbuilder:build-in-finalbuilder'
     },
     {
       'label': 'Build with FBCmd'
-      'command': 'finalbuilder:build-with-cmd'
+      'command': 'finalbuilder:build-with-fbcmd'
     },
     {
       'type': 'separator'
@@ -22,15 +22,15 @@
   '.tree-view .file .name[data-name$=\\.fbz7]': [
     {
       'label': 'Open in FinalBuilder'
-      'command': 'finalbuilder:open-in-ui'
+      'command': 'finalbuilder:open-in-finalbuilder'
     },
     {
       'label': 'Build in FinalBuilder'
-      'command': 'finalbuilder:build-with-ui'
+      'command': 'finalbuilder:build-in-finalbuilder'
     },
     {
       'label': 'Build with FBCmd'
-      'command': 'finalbuilder:build-with-cmd'
+      'command': 'finalbuilder:build-with-fbcmd'
     },
     {
       'type': 'separator'
@@ -53,15 +53,15 @@
         }
         {
           'label': 'Open in FinalBuilder'
-          'command': 'finalbuilder:open-in-ui'
+          'command': 'finalbuilder:open-in-finalbuilder'
         }
         {
           'label': 'Build in FinalBuilder'
-          'command': 'finalbuilder:build-with-cmd'
+          'command': 'finalbuilder:build-in-finalbuilder'
         }
         {
           'label': 'Build with FBCmd'
-          'command': 'finalbuilder:build-with-cmd'
+          'command': 'finalbuilder:build-with-fbcmd'
         }
       ]
     ]
