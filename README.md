@@ -9,8 +9,15 @@ You can use **Command Palette** or **Treeview Context Menu**.
 ## Available Commands
 
 * Open in FinalBuilder
-* Build Project in FinalBuilder
-* Build Project with FBCmd
+* Build in FinalBuilder
+* Build with FBCmd
+
+#### Tree-view Context Menu
+![context menu](context-menu.png)
+
+#### Command Palette
+
+![command pallete](command-palette.png)
 
 ## Compatibility
 

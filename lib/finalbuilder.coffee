@@ -1,4 +1,6 @@
 FinalbuilderView = require './finalbuilder-view'
+FinalBuilderUtils = require './finalbuilder-utils'
+
 {CompositeDisposable} = require 'atom'
 
 exec = require('child_process').exec
@@ -37,53 +39,39 @@ module.exports = Finalbuilder =
     finalbuilderViewState: @finalbuilderView.serialize()
 
   doOpenInUI: (e) =>
-    console.log 'openInUI'
-    target = e.currentTarget
-    filePath = target.getPath?() ? target.getModel?().getPath()
+    fbu = new FinalBuilderUtils()
+    filePath = fbu.getFilePathFromEvent(e)
+
     path = require('path')
     folder = path.dirname(filePath)
-    #aPath = getApplicationPath('FinalBuilder7.exe')
 
-    installPath = atom.config.get("finalbuilder.installPath")
-    if installPath == undefined or installPath == ''
-      atom.notifications.addError('FinalBuilder Installation Path not defined')
-      return
-    aPath = path.join(installPath, 'FinalBuilder7.exe')
+    aPath = fbu.getApplicationPath('FinalBuilder7.exe')
 
-#    aPath = 'C:\\Program Files\\FinalBuilder 7\\FinalBuilder7.exe'
     cmdline = "\"#{aPath}\" \"#{filePath}\" "
     exec "start \"open ui\" " + cmdline, cwd: folder
 
 
   doBuildWithUI: (e) =>
-    console.log 'buildWithUI'
-    target = e.currentTarget
-    filePath = target.getPath?() ? target.getModel?().getPath()
+    fbu = new FinalBuilderUtils()
+    filePath = fbu.getFilePathFromEvent(e)
+
     path = require('path')
     folder = path.dirname(filePath)
-    #aPath = getApplicationPath('FinalBuilder7.exe')
-    #aPath = 'C:\\Program Files\\FinalBuilder 7\\FinalBuilder7.exe'
-    installPath = atom.config.get("finalbuilder.installPath")
-    if installPath == undefined or installPath == ''
-      atom.notifications.addError('FinalBuilder Installation Path not defined')
-      return
-    aPath = path.join(installPath, 'FinalBuilder7.exe')
+
+    aPath = fbu.getApplicationPath('FinalBuilder7.exe')
+
     cmdline = "\"#{aPath}\" -r -a \"#{filePath}\" "
     exec "start \"build ui\" " + cmdline, cwd: folder
 
 
   doBuildWithCmd: (e) =>
-    console.log 'buildWithCmd'
-    target = e.currentTarget
-    filePath = target.getPath?() ? target.getModel?().getPath()
+    fbu = new FinalBuilderUtils()
+    filePath = fbu.getFilePathFromEvent(e)
+
     path = require('path')
     folder = path.dirname(filePath)
-    #aPath = getApplicationPath('FBCMD.exe')
-    #aPath = 'C:\\Program Files\\FinalBuilder 7\\FBCMD.exe'
-    installPath = atom.config.get("finalbuilder.installPath")
-    if installPath == undefined or installPath == ''
-      atom.notifications.addError('FinalBuilder Installation Path not defined')
-      return
-    aPath = path.join(installPath, 'FBCMD.exe')
+
+    aPath = fbu.getApplicationPath('FBCMD.exe')
+
     cmdline = "\"#{aPath}\" /P\"#{filePath}\" "
     exec "start \"build cmd\" " + cmdline, cwd: folder
