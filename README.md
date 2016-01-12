@@ -29,3 +29,7 @@ The package is compatible with FinalBuilder 7, and works with *compressed (fbz7)
 * Support for other FinalBuilder versions
 * Display the build log inside Atom instead of external command prompt
 * Display all available FinalBuilder projects in your Atom project, using a `SelectListView`
+
+## License
+
+[MIT](LICENSE.md) &copy; Alessandro Fragnani
