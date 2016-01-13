@@ -1,3 +1,6 @@
+## 0.3.1 - Repository renamed
+* Screenshot URL updated
+
 ## 0.3.0 - Repository renamed
 * GitHub repository renamed
 

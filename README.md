@@ -14,11 +14,11 @@ You can use **Command Palette** or **Treeview Context Menu**.
 
 #### Tree-view Context Menu
 
-![context menu](https://raw.githubusercontent.com/alefragnani/finalbuilder/master/context-menu.png)
+![context menu](https://raw.githubusercontent.com/alefragnani/atom-finalbuilder/master/context-menu.png)
 
 #### Command Palette
 
-![command pallete](https://raw.githubusercontent.com/alefragnani/finalbuilder/master/command-palette.png)
+![command pallete](https://raw.githubusercontent.com/alefragnani/atom-finalbuilder/master/command-palette.png)
 
 ## Compatibility
 
