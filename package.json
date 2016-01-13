@@ -10,7 +10,7 @@
       "finalbuilder:build-with-fbcmd"
     ]
   },
-  "repository": "https://github.com/alefragnani/finalbuilder",
+  "repository": "https://github.com/alefragnani/atom-finalbuilder",
   "license": "MIT",
   "engines": {
     "atom": ">=0.174.0 <2.0.0"
