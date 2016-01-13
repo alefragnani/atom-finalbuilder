@@ -1,3 +1,6 @@
+## 0.4.0 - Donation button
+* Donation button added
+
 ## 0.3.1 - Repository renamed
 * Screenshot URL updated
 
