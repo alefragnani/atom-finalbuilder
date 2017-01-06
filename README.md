@@ -24,16 +24,10 @@ You can use **Command Palette** or **Treeview Context Menu**.
 
 The package is compatible with FinalBuilder 7, and works with *compressed (fbz7)* and *uncompressed (fbp7)* projects
 
-## TODO List
-
-* Support for other FinalBuilder versions
-* Display the build log inside Atom instead of external command prompt
-* Display all available FinalBuilder projects in your Atom project, using a `SelectListView`
-
 ## License
 
 [MIT](LICENSE.md) &copy; Alessandro Fragnani
 
 ---
 
-[![Paypal Donations](https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=EP57F3B6FXKTU&lc=US&item_name=Alessandro%20Fragnani&item_number=atom%20plugins&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted) if you enjoy using this plugin :smile:
+[![Paypal Donations](https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=EP57F3B6FXKTU&lc=US&item_name=Alessandro%20Fragnani&item_number=atom%20plugins&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted) a :coffee: if you enjoy using this package :wink:
