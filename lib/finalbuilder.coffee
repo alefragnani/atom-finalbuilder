@@ -15,8 +15,15 @@ module.exports = Finalbuilder =
     installPath:
       type: 'string'
       title: 'FinalBuilder Installation Path'
-      description: 'Indicate the folder where FinalBuilder is installed'
+      description: 'Indicates the folder where FinalBuilder is installed'
       default: ''
+
+    installVersion:
+      type: 'integer'
+      title: 'FinalBuilder Version'
+      description: 'Indicates the FinalBuilder Version'
+      default: 7
+      enum: [7, 8]
 
 
   activate: (state) ->
@@ -45,7 +52,10 @@ module.exports = Finalbuilder =
     path = require('path')
     folder = path.dirname(filePath)
 
-    aPath = fbu.getApplicationPath('FinalBuilder7.exe')
+    ver = 7
+    if atom.config.get("finalbuilder.installVersion") == 8
+      ver = 8
+    aPath = fbu.getApplicationPath('FinalBuilder' + ver + '.exe')
 
     cmdline = "\"#{aPath}\" \"#{filePath}\" "
     exec "start \"open ui\" " + cmdline, cwd: folder
@@ -58,7 +68,10 @@ module.exports = Finalbuilder =
     path = require('path')
     folder = path.dirname(filePath)
 
-    aPath = fbu.getApplicationPath('FinalBuilder7.exe')
+    ver = 7
+    if atom.config.get("finalbuilder.installVersion") == 8
+      ver = 8
+    aPath = fbu.getApplicationPath('FinalBuilder' + ver + '.exe')
 
     cmdline = "\"#{aPath}\" -r -a \"#{filePath}\" "
     exec "start \"build ui\" " + cmdline, cwd: folder
@@ -73,5 +86,9 @@ module.exports = Finalbuilder =
 
     aPath = fbu.getApplicationPath('FBCMD.exe')
 
-    cmdline = "\"#{aPath}\" /P\"#{filePath}\" "
+    param = '/p'
+    if atom.config.get("finalbuilder.installVersion") == 8
+      param = ''
+    cmdline = "\"#{aPath}\" " + param + "\"#{filePath}\" "
+    console.log cmdline
     exec "start \"build cmd\" " + cmdline, cwd: folder
