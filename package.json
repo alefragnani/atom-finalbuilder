@@ -1,7 +1,7 @@
 {
   "name": "finalbuilder",
   "main": "./lib/finalbuilder",
-  "version": "0.4.1",
+  "version": "0.5.0",
   "description": "Build FinalBuilder projects from Atom",
   "activationCommands": {
     "atom-workspace": [
