@@ -1,5 +1,7 @@
 # FinalBuilder Package for Atom
 
+> Following Atom archiving in December 15, 2022, this package will be archived as well. Learn more in their [official announcement](https://github.blog/2022-06-08-sunsetting-atom/)
+
 Build FinalBuilder projects from Atom.
 
 Select any FinalBuilder project available and build it, inside FinalBuilder or in command prompt. You can use projects that you are editing or any available in the Tree View.
